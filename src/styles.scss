@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+@import "fonts";
+
+:root {
+  --dark-color: #000;
+  --light-color: #fff;
+  --light-transparent: rgba(255, 255, 255, 0.75);
+  --primary-color: #ae7aff;
+  --gray-soft: #5f646d;
+}
+
+*,
+*:before,
+*:after, {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "JetBrains Mono", sans-serif;
+  background-color: var(--dark-color);
+  background-image: url('../public/assets/img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--light-color);
+}
+
+.skill-tag {
+  padding: 4px 8px;
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  display: inline;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.btn {
+  border: transparent;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  border-radius: 2px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.btn-shadow {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: var(--gray-soft);
+    border-radius: 2px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+}
+
+.h6 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.tt-control-label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 16px;
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  .tt-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    border-radius: 2px;
+    display: block;
+    padding: 12px 20px;
+    width: 100%;
+    font-family: "JetBrains Mono", sans-serif;
+
+    &::placeholder {
+      color: var(--light-transparent);
+    }
+  }
+
+}

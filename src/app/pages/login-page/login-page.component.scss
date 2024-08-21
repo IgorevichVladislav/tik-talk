@@ -1,0 +1,19 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100dvh;
+  align-items: center;
+  margin: 0 164px;
+}
+
+.login-form {
+  max-width: 440px;
+h1 {
+  margin-bottom: 60px;
+}
+  .btn {
+    display: block;
+    margin-top: 32px;
+    width: 100%;
+  }
+}
