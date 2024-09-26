@@ -1,0 +1,78 @@
+.profile-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+
+  .profile-page__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark-color);
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    transform: rotate(0deg);
+    transition: transform 0.3s linear;
+
+    &:hover {
+      .profile-page__setting-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    .profile-page__setting-icon {
+      width: 16px;
+      height: 16px;
+      transform: rotate(0deg);
+      transition: transform 0.3s linear;
+    }
+  }
+
+}
+
+.profile-page__body {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  grid-gap: 64px;
+  padding: 24px;
+
+  .subscribers-and-skills {
+
+    .subscribers {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 16px 0 32px;
+
+      &__avatar-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+      }
+
+      &__search {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .stack-wrapper {
+      margin: 16px 0 32px;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .about {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 16px;
+    }
+  }
+}

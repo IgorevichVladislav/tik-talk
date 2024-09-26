@@ -1,1 +1,62 @@
-<p>sidebar works!</p>
+<div class="sidebar">
+  <header class="sidebar__head">
+    <img
+      class="small-logo"
+      src="/assets/svg/tik-talk-logo-small.svg"
+      alt="Tik-Talk Logo Small"
+
+    >
+    <nav class="main-menu">
+      <ul class="main-menu_list">
+        <li class="main-menu_item"
+            *ngFor="let menuItem of menuItems"
+        >
+          <a class="main-menu_button"
+             [routerLink]="menuItem.link"
+             routerLinkActive="activeRoute"
+          >
+            <svg class="main-menu_icon" icon='{{menuItem.icon}}'></svg>
+            <span>{{ menuItem.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="medium-text">Подписчики</p>
+    @for (subscriber of subscribers$ | async; track subscriber.id) {
+      <app-subscriber-card
+        [profile]="subscriber"
+      >
+      </app-subscriber-card>
+    }
+    <div class="to-subscribers medium-text"
+    >
+      <a
+        class="to-subscribers_link"
+        [routerLink]="['/subscribers']"
+      >Все подписчики
+
+      </a>
+
+      <svg
+        class="to-subscribers_arrow"
+        icon="arrow"></svg>
+
+    </div>
+  </header>
+  <footer class="sidebar__footer">
+    @if (me(); as me) {
+
+      @if (me.avatarUrl) {
+        <img class="no-avatar" [src]="me.avatarUrl | imgUrl" [alt]="me.username">
+      } @else {
+        <img class="no-avatar" src="/assets/svg/user-placeholder.svg" alt="Unregistered User">
+      }
+      <p class="sidebar__username-text">{{ me.username }}</p>
+      <a [routerLink]='["settings"]'>
+        <svg class="sidebar__settings" icon="settings"></svg>
+      </a>
+    }
+
+  </footer>
+</div>

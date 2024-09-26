@@ -8,12 +8,33 @@
 
 .login-form {
   max-width: 440px;
-h1 {
-  margin-bottom: 60px;
-}
+
+  h1 {
+    margin-bottom: 60px;
+  }
+
   .btn {
     display: block;
     margin-top: 32px;
     width: 100%;
+  }
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #ffffffbf;
+  cursor: pointer;
+
+  &.active {
+    color: var(--primary-color);
   }
 }

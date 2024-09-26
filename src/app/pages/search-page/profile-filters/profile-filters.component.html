@@ -1,0 +1,17 @@
+<form class="profile-search-form" [formGroup]="searchForm">
+      <label class="profile-form__label">
+        <span class="profile-form__text">Имя пользователя</span>
+        <input class="profile-form__input" type="text" placeholder="Введите данные"
+               formControlName="firstName">
+      </label>
+      <label class="profile-form__label">
+        <span class="profile-form__text">Фамилия</span>
+        <input class="profile-form__input" type="text" placeholder="Введите данные"
+               formControlName="lastName">
+      </label>
+    <label class="profile-form__label">
+      <span class="profile-form__text">Навыки</span>
+      <input class="profile-form__input" type="text" placeholder="Введите данные"
+             formControlName="stack">
+    </label>
+</form>

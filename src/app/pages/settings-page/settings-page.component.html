@@ -1,0 +1,51 @@
+<app-profile-header>
+
+</app-profile-header>
+<form class="profile-form" [formGroup]="form">
+  <div class="profile-form__wrapper">
+
+    <div class="profile-form__two-columns">
+      <label class="profile-form__label">
+        <span class="profile-form__text">Имя</span>
+        <input class="profile-form__input" type="text" placeholder="Введите данные"
+               formControlName="firstName">
+      </label>
+      <label class="profile-form__label">
+        <span class="profile-form__text">Фамилия</span>
+        <input class="profile-form__input" type="text" placeholder="Введите данные"
+               formControlName="lastName">
+      </label>
+    </div>
+    <label class="profile-form__label">
+      <span class="profile-form__text">Telegram usermane</span>
+      <input class="profile-form__input" type="text" placeholder="Введите данные"
+             formControlName="username">
+    </label>
+    <label class="profile-form__label">
+      <span class="profile-form__text">О себе</span>
+      <textarea class="profile-form__input profile-form__textarea" placeholder="Введите данные"
+                formControlName="description" rows="4">
+    </textarea>
+    </label>
+
+    <label class="profile-form__label">
+      <span class="profile-form__text">Аватар</span>
+      <app-avatar-upload></app-avatar-upload>
+    </label>
+
+    <label class="profile-form__label">
+      <span class="profile-form__text">Навыки (Стэк)</span>
+      <input class="profile-form__input" type="text" placeholder="Введите данные"
+             formControlName="stack">
+    </label>
+  </div>
+
+  <ul class="profile-form__btn-list">
+    <li class="profile-form__btn-item">
+      <button class="profile-form__btn">Отмена</button>
+    </li>
+    <li class="profile-form__btn-item">
+      <button class="profile-form__btn" (click)="onSave()">Сохранить</button>
+    </li>
+  </ul>
+</form>
